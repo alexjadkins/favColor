@@ -1,3 +1,5 @@
+{
 "require-dev": {
         "ext-gd": "*",
     }
+}
