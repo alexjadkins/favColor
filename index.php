@@ -61,9 +61,10 @@
         			echo "<img src='".$pics[$j]."'/>";
 		
     				$image = file_get_contents($pics[$j]);
+				echo $j;
     				$width = imagesx($image);
 				$height = imagesy($image);
-				echo $j;
+				
 				for ($y = 0; $y < $height; $y++) {
 		
 					for ($x = 0; $x < $width; $x++) {
