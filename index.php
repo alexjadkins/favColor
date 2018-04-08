@@ -59,11 +59,12 @@
     
     			for($j = 0;$j<6;$j++){
         			echo "<img src='".$pics[$j]."'/>";
-				echo $j;
+				
     				$c = file_get_contents($pics[$j]);
     				$image = imagecreatefromstring($c);// imagecreatefromjpeg/png/
     				$width = imagesx($image);
 				$height = imagesy($image);
+				echo $j;
 				for ($y = 0; $y < $height; $y++) {
 		
 					for ($x = 0; $x < $width; $x++) {
