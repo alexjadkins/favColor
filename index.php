@@ -59,11 +59,13 @@
     			for($j = 0;$j<6;$j++){
         			echo "<img src='".$pics[$j]."'/>";
 			}
-		/*
-    				$image = imagecreatefromstring(file_get_contents($pics[$j]));
+		
+    				//$image = imagecreatefromstring(file_get_contents($pics[$j]));
 				
 				list($width, $height) = getimagesize($pics[$j]);
     
+				echo $width;
+		echo $height;
 				for ($y = 0; $y < $height; $y++) {
 		
 					for ($x = 0; $x < $width; $x++) {
@@ -94,7 +96,6 @@
 				$numPixels += $height * $width;
 			}
 
-*/
 			echo "Black: " , ($occurences[0] / $numPixels * 100) , "<br></br>";
 			echo "White: " , ($occurences[1] / $numPixels * 100) , "<br></br>";
 			echo "Red: " , ($occurences[2] / $numPixels * 100) , "<br></br>";
