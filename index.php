@@ -60,7 +60,8 @@
         			echo "<img src='".$pics[$j]."'/>";
 			
 		
-    				//$image = imagecreatefromstring(file_get_contents($pics[$j]));
+    				  $c = file_get_contents($pics[$j]);
+    				$image = imagecreatefromstring($c);
 				
 				
 				list($width,$height) = getimagesize($pics[$j]);
