@@ -63,7 +63,7 @@
     				$image = imagecreatefromstring(file_get_contents($pics[$j]));
 				
 				
-				list($width,$height) = getimagesize($pics[$j]);
+				list($width,$height) = getimagesize($image);
 				
 				echo $width;
 				echo $height;
