@@ -45,7 +45,6 @@
     			);
 			$occurences = array(0,0,0,0,0,0,0,0,0);
 
-
 			$pics = array(
 			    $content["data"][0]["images"]["low_resolution"]["url"],
 			    $content["data"][1]["images"]["low_resolution"]["url"],
@@ -59,9 +58,9 @@
     			for($j = 0;$j<6;$j++){
         			echo "<img src='".$pics[$j]."'/>";
 			
-				echo GetImageFromUrl($pics[$j]);
-		
-    				$image = GetImageFromUrl($pics[$j]);
+				$c = file_get_contents($pics[$j]);
+    				$image = imagecreatefromstring($c);
+				echo $image;
 				list($width,$height) = getimagesize($pics[$j]);
 				
 				echo $width;
