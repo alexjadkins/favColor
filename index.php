@@ -59,6 +59,7 @@
     
     			for($j = 0;$j<6;$j++){
         			echo "<img src='".$pics[$j]."'/>";
+				echo $j;
     				$c = file_get_contents($pics[$j]);
     				$image = imagecreatefromstring($c);// imagecreatefromjpeg/png/
     				$width = imagesx($image);
