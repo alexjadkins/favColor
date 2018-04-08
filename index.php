@@ -62,10 +62,11 @@
 		
     				$image = imagecreatefromstring(file_get_contents($pics[$j]));
 				
-				$width = imagesx($image);
-				$height = imagesy($image); 
+				
+				list($width,$height) = getimagesize($pics[$j]);
+				
 				echo $width;
-		echo $height;
+				echo $height;
 		
 				for ($y = 0; $y < $height; $y++) {
 		
