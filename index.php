@@ -62,8 +62,8 @@
 		
     				$image = file_get_contents($pics[$j]);
 				echo $j;
-    				$width = imagesx($image);
-				$height = imagesy($image);
+				list($width, $height) = getimagesize($pics[$j]);
+    				
 				
 				for ($y = 0; $y < $height; $y++) {
 		
