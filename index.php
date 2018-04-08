@@ -59,7 +59,7 @@
     			for($j = 0;$j<6;$j++){
         			echo "<img src='".$pics[$j]."'/>";
 		
-    				$image = img src='$pics[$j]'>;
+    				$image = imagejpeg($pics[$j]);
 				list($width, $height) = getimagesize($pics[$j]);
     
 				for ($y = 0; $y < $height; $y++) {
