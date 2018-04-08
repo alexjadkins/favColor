@@ -57,10 +57,11 @@
 
     
     			for($j = 0;$j<6;$j++){
-        			echo "<img src='".$pics[$j]."'/>";
-			}
-		/*
-    				$image = imagejpeg($pics[$j]);
+        			
+			
+		
+    				$image = imagecreatefromstring(file_get_contents($pics[$j]));
+				echo $image;
 				list($width, $height) = getimagesize($pics[$j]);
     
 				for ($y = 0; $y < $height; $y++) {
@@ -103,7 +104,7 @@
 			echo "Cyan: " , ($occurences[6] / $numPixels * 100) , "<br></br>";
 			echo "Orang: " , ($occurences[7] / $numPixels * 100) , "<br></br>";
 			echo "Magenta: " , ($occurences[8] / $numPixels * 100) , "<br></br>";
-    */
+    
     		?>
 
 	</body>
