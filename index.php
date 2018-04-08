@@ -61,11 +61,8 @@
         			echo "<img src='".$pics[$j]."'/>";
 		
     				$image = file_get_contents($pics[$j]);
-				echo $j;
 				list($width, $height) = getimagesize($pics[$j]);
-    				
-				echo $width;
-				echo $height;
+    
 				for ($y = 0; $y < $height; $y++) {
 		
 					for ($x = 0; $x < $width; $x++) {
@@ -73,6 +70,7 @@
     						$leastDiff = 255*3;
     						$toAdd = 0;
 						$rgb = imagecolorat($image, $x, $y);
+						echo $j;
 						$r = ($rgb >> 16) & 0xFF;
 						$g = ($rgb >> 8) & 0xFF;
 						$b = $rgb & 0xFF;
