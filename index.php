@@ -64,7 +64,8 @@
 				echo $j;
 				list($width, $height) = getimagesize($pics[$j]);
     				
-				
+				echo $width;
+				echo $height;
 				for ($y = 0; $y < $height; $y++) {
 		
 					for ($x = 0; $x < $width; $x++) {
