@@ -63,9 +63,6 @@
     				$image = imagecreatefromstring($c);
 				
 				list($width,$height) = getimagesize($pics[$j]);
-				
-				echo $width;
-				echo $height;
 		
 				for ($y = 0; $y < $height; $y++) {
 		
@@ -74,7 +71,6 @@
     						$leastDiff = 255*3;
     						$toAdd = 0;
 						$rgb = imagecolorat($image, $x, $y);
-						echo $j;
 						$r = ($rgb >> 16) & 0xFF;
 						$g = ($rgb >> 8) & 0xFF;
 						$b = $rgb & 0xFF;
