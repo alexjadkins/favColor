@@ -76,10 +76,10 @@
 						$b = $rgb & 0xFF;
 
         					for ($i = 0; $i < 9; $i++) {
-            						$diff = new Euclidean();
-							$diff = distance($standardColors[$i],array($r,$g,$b));
+            						/*$diff = new Euclidean();
+							$diff = distance($standardColors[$i],array($r,$g,$b));*/
 							//$diff = abs($standardColors[$i][0] - $r) + abs($standardColors[$i][1] - $g) + abs($standardColors[$i][2] - $b);
-                
+                					$diff = sqrt(pow($standardColors[$i][0] - $r,2) + pow($standardColors[$i][1] - $g,2)  pow($standardColors[$i][2] - $b,2));
                 					if($diff<$leastDiff){
                     					$leastDiff = $diff;
                     					$toAdd=$i;  
